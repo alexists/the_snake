@@ -1,4 +1,5 @@
 from random import choice, randint
+import pytest_timeout
 
 import pygame
 
