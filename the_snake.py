@@ -90,10 +90,10 @@ class Snake(GameObject):
     def move(self):
         """Обновляет позицию змейки"""
         x_head, y_head = self.get_head_position()
-        new_head_position = ((x_head + self.direction[0]
-                            * GRID_SIZE) % SCREEN_WIDTH,
-                            (y_head + self.direction[1]
-                            * GRID_SIZE) % SCREEN_HEIGHT)
+        new_head_position = ((x_head + self.direction[0] * GRID_SIZE
+                              ) % SCREEN_WIDTH,
+                            (y_head + self.direction[1] * GRID_SIZE
+                             ) % SCREEN_HEIGHT)
         if len(self.positions) > self.length:
             self.last = self.positions.pop()
         else:
