@@ -49,7 +49,7 @@ clock = pygame.time.Clock()
 class GameObject:
     """Это базовый класс, от которого наследуются другие игровые объекты"""
 
-    def __init__(self, body_color) -> None:
+    def __init__(self, body_color=None) -> None:
         """Инициализирует базовые атрибуты объекта"""
         self.position = SCREEN_CENTER
         self.body_color = body_color
