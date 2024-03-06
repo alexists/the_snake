@@ -113,7 +113,7 @@ class Snake(GameObject):
 class Apple(GameObject):
     """Класс описывающий яблоко и действия с ним."""
 
-    def __init__(self, position, body_color=APPLE_COLOR):
+    def __init__(self, position=SCREEN_CENTER, body_color=APPLE_COLOR):
         """Задаёт цвет яблока и вызывает метод,"""
         """чтобы установить начальную позицию."""
         super().__init__(position, body_color)
