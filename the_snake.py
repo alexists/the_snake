@@ -158,14 +158,14 @@ def main():
     while True:
         clock.tick(SPEED)
         handle_keys(snake)
-
+        snake.move()
         if snake.get_head_position() == apple.position:
             snake.length += 1
             apple.randomize_position(snake.positions)
-        snake.move()
-        if snake.positions[0] in snake.positions[4:]:
-            snake.reset()
-            screen.fill(BOARD_BACKGROUND_COLOR)
+        else:
+            if snake.positions[0] in snake.positions[4:]:
+                snake.reset()
+                screen.fill(BOARD_BACKGROUND_COLOR)
 
         apple.draw()
         snake.draw()
